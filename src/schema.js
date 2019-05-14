@@ -2,27 +2,10 @@ const { gql } = require('apollo-server');
 
 const typeDefs = gql`
 type Query {
-  letters: [Letter]!
   ost: [Ost]
   intense: [Intense]
-  letter(id: ID!): [Letter]
-  randomPerson: [Person]!
 }
-type Letter {
-  id: ID!
-  title: String
-  send_place: String
-  dest_place: String
-  date: String
-  sender: String
-  receiver: String
-  content: String
-}
-type Person {
-  name: String
-  surname: String
-  email: String
-}
+
 type Term {
   name: String
   id: String
