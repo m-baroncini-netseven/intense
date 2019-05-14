@@ -13,6 +13,8 @@ const server = new ApolloServer({
     mocks: mocks,
     mockEntireSchema: false,
     resolvers,
+    introspection: true, // enables introspection of the schema
+    playground: true, // enables the actual playground
 })
 
 server.applyMiddleware({ app, path: '/'});
