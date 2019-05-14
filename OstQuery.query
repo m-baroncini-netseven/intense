@@ -1,0 +1,78 @@
+# Write your query or mutation here
+fragment OstInfo on Ost {
+  name
+  descrizione
+  type
+  identificativoCatasto
+  identificativo
+  lunghezza
+  pendenza
+  dislivelloSalita
+  dislivelloDiscesa
+  tempoPercorrenza {
+    type
+    value
+  }
+  gradoProtezione
+  percorrenza
+  visitabile
+  fruizione {
+    name
+  }
+  tipologia {
+    name
+  }
+  tematica {
+    name
+  }
+  statoFondo {
+    name
+  }
+  tipoFondo {
+    name
+  }
+  presenzaSegnaletica {
+    name
+  }
+  accessibilitaDisabili {
+    name
+  }
+  riconoscimenti {
+    name
+  }
+  rete {
+    name
+  }
+  ambito {
+    name
+  }
+  esposizioneRischi {
+    name
+  }
+  gradoDifficolta {
+    type
+    value
+  }
+  contatti {
+    type
+    value
+  }
+  allegati {
+    name
+  }
+  immagine {
+    name
+    url
+  }
+  geometry
+  {
+    type 
+    value
+  }
+}
+
+query {
+ 	ost {
+    ...OstInfo
+  }
+}

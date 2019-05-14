@@ -1,0 +1,125 @@
+# Write your query or mutation here
+
+
+query {
+ 	intense {
+    ...IntenseInfo
+  }
+}
+
+fragment IntenseInfo on Intense {
+  name
+  descrizione
+  tappe {
+    ...TappaInfo
+  }
+  periodoStart
+  periodoEnd
+  distanza
+  dislivelloPositivo
+  dislivelloNegativo
+  altezzaMassima
+  altezzaMinima
+  altezzaStart
+  altezzaEnd
+  mezziTrasporto {
+    name
+  }
+  durataPercorso
+  pendenzaMax
+  allegati {
+    name
+    url
+  }
+  immagine {
+    name
+    url
+  }
+  geometry {
+    value
+    type
+  }
+  locale
+}
+
+fragment TappaInfo on Tappa {
+  name
+  descrizione
+  durataPercorso
+  locale
+  ost {
+    ...OstInfo
+  }
+}
+fragment OstInfo on Ost {
+  name
+  descrizione
+  type
+  identificativoCatasto
+  identificativo
+  lunghezza
+  pendenza
+  dislivelloSalita
+  dislivelloDiscesa
+  tempoPercorrenza {
+    type
+    value
+  }
+  gradoProtezione
+  percorrenza
+  visitabile
+  locale
+  fruizione {
+    name
+  }
+  tipologia {
+    name
+  }
+  tematica {
+    name
+  }
+  statoFondo {
+    name
+  }
+  tipoFondo {
+    name
+  }
+  presenzaSegnaletica {
+    name
+  }
+  accessibilitaDisabili {
+    name
+  }
+  riconoscimenti {
+    name
+  }
+  rete {
+    name
+  }
+  ambito {
+    name
+  }
+  esposizioneRischi {
+    name
+  }
+  gradoDifficolta {
+    type
+    value
+  }
+  contatti {
+    type
+    value
+  }
+  allegati {
+    name
+  }
+  immagine {
+    name
+    url
+  }
+  geometry
+  {
+    type 
+    value
+  }
+}
