@@ -54,7 +54,10 @@ type Tappa {
   name: String
   descrizione: String
   durataPercorso: Int
-  ost: [Ost]
+  ostAttrattore: [Ost]
+  ostWayPoint: [Ost]
+  ostServizio: [Ost]
+  ostSentieroPercorso: [Ost]
   locale: String
 }
 
